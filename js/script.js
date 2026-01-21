@@ -100,6 +100,38 @@ function dark(){
 }
 // ===============================================================
 // ===============================================================
+
+
+let opt1 =document.getElementById("opt1");
+let opt2 =document.getElementById("opt2");
+let opt3 =document.getElementById("opt3");
+let opt4 =document.getElementById("opt4");
+let mainBtn =document.getElementById("mainBtn");
+
+let isopen = false;
+
+mainBtn.addEventListener("click",()=>{
+if(!isopen){
+   opt1.classList.add('-translate-y-20', 'scale-100')
+   opt2.classList.add('translate-x-20', 'scale-100')
+   opt3.classList.add('translate-y-20', 'scale-100')
+   opt4.classList.add('-translate-x-20', 'scale-100')
+   isopen=true;
+mainBtn.innerText="close";
+}
+else{
+   opt1.classList.remove('-translate-y-20', 'scale-100');
+        opt2.classList.remove('translate-x-20', 'scale-100');
+        opt3.classList.remove('translate-y-20', 'scale-100');
+        opt4.classList.remove('-translate-x-20', 'scale-100');
+      isopen=false;
+      mainBtn.innerText="menue";
+  
+}
+
+});
+
+// ===============================================================
 // ===============================================================
 
 
