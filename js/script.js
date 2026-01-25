@@ -132,6 +132,101 @@ else{
 });
 
 // ===============================================================
+let box = document.getElementById("box");
+let buttonOne = document.getElementById("buttonOne");
+let buttonTwo = document.getElementById("buttonTwo");
+
+let count=0;
+buttonOne.addEventListener("click",()=>{
+  if(count < 10){
+      count++;
+   box.innerText=count
+
+  }
+})
+buttonTwo.addEventListener("click",()=>{
+   if(count > 0){
+      count--;
+   box.innerText=count
+
+   }
+})
+
+
+// ===============================================================
+let buttonThree =document.getElementById("buttonThree")
+let speker1 = "what we know today?";
+let speker2 = "this is my frist class ";
+
+buttonThree.addEventListener("click",()=>{
+
+
+if (speker1 === "what we know today?") {
+    const utterance = new SpeechSynthesisUtterance("Today we know about javascript");
+    window.speechSynthesis.speak(utterance);
+}
+if (speker2 === "this is my frist class") {
+    const utterance = new SpeechSynthesisUtterance("this is my frist class");
+    window.speechSynthesis.speak(utterance);
+}
+else{
+   const utterance = new SpeechSynthesisUtterance("if you attend this class you know about javascript");
+    window.speechSynthesis.speak(utterance);
+}
+
+})
+
+// ===============================================================
+let input = document.getElementById("input");
+let buttonFour = document.getElementById("Btnone"); 
+
+input.addEventListener("input", () => {
+   if (input.value !== "") {
+      buttonFour.style.display="inline-block";
+      buttonFour.disabled = false;
+   }
+   else{
+      buttonFour.style.display ="none";
+ }
+});
+
+
+buttonFour.addEventListener("click", () => {
+    input.value ="";
+    buttonFour.style.display ="none";
+});
+// ===============================================================
+
+
+
+  let toggler = document.getElementById('toggler');
+  let slider = document.getElementById('slider'); 
+  let overlay = document.getElementById('overlay');
+  let close = document.getElementById('close');
+
+
+  toggler.onclick = () => {
+    slider.classList.remove('-translate-x-full');
+    overlay.classList.remove('hidden');
+  };
+
+
+  const close1 = () => {
+    slider.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+  };
+
+  overlay.onclick = close1;
+  close.onclick = close1;
+
+
+// ===============================================================
+
+// ===============================================================
+// ===============================================================
+// ===============================================================
+// ===============================================================
+// ===============================================================
 // ===============================================================
 
 
